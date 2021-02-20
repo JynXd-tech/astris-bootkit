@@ -6,25 +6,26 @@ So let's say production devices and components doesn't go in pair with demotion.
 I shared the sample code in this repo. See src/boot.s
 The code looks like that:
 
-`.text
+`.text`
 
-.pool
-
-
-.set prepare_and_jump, 0x10000B014
-.set JUMP_ADDR, 0x180380000
+`.pool`
 
 
-.global _main
+`.set prepare_and_jump, 0x10000B014`
+`.set JUMP_ADDR, 0x180380000`
 
-_main:
-MOV X0, #0x0
-LDR X1, =JUMP_ADDR
-MOV X2, X0
-LDR X4, =0x100000790
-BLR X4
-LDR X4, =prepare_and_jump
-BR X4`
+
+`.global _main`
+
+`_main:`
+
+`MOV X0, #0x0`
+`LDR X1, =JUMP_ADDR`
+`MOV X2, X0`
+`LDR X4, =0x100000790`
+`BLR X4`
+`LDR X4, =prepare_and_jump`
+`BR X4`
 
 Let's first say what those offsets stand for:
 
