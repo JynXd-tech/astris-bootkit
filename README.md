@@ -1,1 +1,2 @@
 # astris-bootkit
+Many people asks me how they can load iBSS and iBEC from DFU after device was demoted. This small documentation was written to explain how to do this and what's the problem. I hoped to make this as clear as possible. Happy reading and if you have any questions feel free to ask me on twitter (@exploit3dguy) =). I do not guarantee that I will answer but I will try to (sometimes I don't see your DMs).
