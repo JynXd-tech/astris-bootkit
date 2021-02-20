@@ -100,6 +100,36 @@ I usually put my shellcode in the place between the free space and re-allocated 
 
 `CPU0 > go`
 
+To verify that image was booted successfully check the serial log.
+
+![](img/img3.png)
+
+And as you can see it failed to boot LLB from nand. It's beacuse of demotion check. on A9 it also disables usb. on A10(up) since there is only stage bootloader you will directly end up in iBoot. on iOS 8 and below there are no huge demotion checks so you can boot iBEC on A7/A8 with such old bootloader. 
 
 
+# Fix for iBSS on A9/A9X
+
+As I said you might have issues on those devices with loading iBEC but we can load iBEC manually the same way we did with iBSS. See src/LLB_payload.s and fix offsets for your device (using small guide I showed for SecureROM). Then compile it and put in iBSS/LLB image somewhere (recommend arround the banner string).
+
+`astris`
+
+`NO CPU > cpu 0`
+
+`CPU0 > halt`
+
+`CPU0 > reg pc 0x180380140`
+
+0x180380140 is where I put my payload.
+
+`CPU0 > load iBoot.dec 0x800000000`
+
+`CPU0 > go`
+
+Now you should end up in iBoot/iBEC booted.
+
+# Fix for loading image4
+
+This is very dirty hax but it works. The solution is to patch `image4_property_callback_interposer`. You can do it using my tool [iPatcher](https://github.com/exploit3dguy/iPatcher). However with this patch you won't be able to load on-device flashed images.
+
+![](img/img4.png)
 
