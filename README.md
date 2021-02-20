@@ -109,7 +109,7 @@ And as you can see it failed to boot iBoot from nand. It's beacuse of demotion c
 
 # Fix for iBSS on A9/A9X
 
-As I said you might have issues on those devices with loading iBEC but we can load iBEC manually the same way we did with iBSS. See src/LLB_payload.s and fix offsets for your device (using small guide I showed for SecureROM). Then compile it and put in iBSS/LLB image somewhere (recommend arround the banner string).
+As I said you might have issues on those devices with loading iBEC but we can load iBEC manually the same way we did with iBSS. See src/LLB_payload.s and fix offsets for your device (using small guide I showed for SecureROM). Then compile it and put it in iBSS/LLB image somewhere (recommend arround the banner string).
 
 `astris`
 
