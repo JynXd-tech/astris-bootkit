@@ -20,11 +20,17 @@ The code looks like that:
 `_main:`
 
 `MOV X0, #0x0`
+
 `LDR X1, =JUMP_ADDR`
+
 `MOV X2, X0`
+
 `LDR X4, =0x100000790`
+
 `BLR X4`
+
 `LDR X4, =prepare_and_jump`
+
 `BR X4`
 
 Let's first say what those offsets stand for:
