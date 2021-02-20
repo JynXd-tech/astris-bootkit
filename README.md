@@ -104,7 +104,7 @@ To verify that image was booted successfully check the serial log.
 
 ![](img/img3.png)
 
-And as you can see it failed to boot LLB from nand. It's beacuse of demotion check. on A9 it also disables usb. on A10(up) since there is only stage bootloader you will directly end up in iBoot. on iOS 8 and below there are no huge demotion checks so you can boot iBEC on A7/A8 with such old bootloader. 
+And as you can see it failed to boot iBoot from nand. It's beacuse of demotion check. on A9 it also disables usb. on A10(up) since there is only stage bootloader you will directly end up in iBoot. on iOS 8 and below there are no huge demotion checks so you can boot iBEC on A7/A8 with such old bootloader. 
 
 
 # Fix for iBSS on A9/A9X
