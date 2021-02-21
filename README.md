@@ -52,7 +52,7 @@ Let's find the offsets now:
 
 1. boot trampoline call function:
 
-search for MOV X18, 0 (120080D2 in hex), go to the begininng of the trampoline. You should see `MSR #6, #0xF` instruction. Then jump to it's XREF and go to beginning of this function.
+search for MOV X18, 0 (120080D2 in hex), go to the begininng of the trampoline. You should see `MSR #6, #0xF` instruction. Then jump to it's XREF and go to beginning of this function, after that jump to it's XREF.
 
 ![](img/img1.png)
 
