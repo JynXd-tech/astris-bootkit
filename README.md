@@ -44,7 +44,7 @@ Let's first say what those offsets stand for:
 
 2. JUMP_ADDR - the address where we put our bootloader
 
-3. 0x100000790 - the function that calls boot trampoline. Boot Trampoline's task is to zero all the registers before jumping to a new image.
+3. 0x100008C50 - the function that calls boot trampoline. Boot Trampoline's task is to zero all the registers before jumping to a new image.
 
 Note: all offsets from here are from s8003 (A9 TSMC) SecureROM.
 
