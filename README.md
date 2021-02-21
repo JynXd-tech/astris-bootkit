@@ -30,7 +30,7 @@ The code looks like that:
 
 `MOV X2, X0`
 
-`LDR X4, =0x100000790`
+`LDR X4, =0x100008C50`
 
 `BLR X4`
 
