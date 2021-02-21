@@ -12,7 +12,7 @@ _main:
 MOV X0, #0
 LDR X1, =JUMP_ADDR
 MOV X2, X0
-LDR X4, =0x100000790
+LDR X4, =0x100008C50
 BLR X4
 LDR X4, =prepare_and_jump
 BR X4
